@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNES</title>
-    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
-</head>
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
 
-<body background="../static/img/fundo.png">
-    <header>
-        <img src="../static/img/logo.png" alt="logo">
-        <aside>
-            <nav>
-                <a href="/">Home</a>
-                <a id="comBorda" href="/quemSomos">Quem somos</a>
-                <a href="/Contato">Contato</a>
-            </nav>
-        </aside>
-    </header>
-
+{% block content %}
     <main>
         <figure>
             <img src="../static/img/capa.png" alt="capa">
@@ -32,8 +16,4 @@
                 Aliquam at nisl finibus, scelerisque metus id, iaculis nisl. Cras mattis fringilla nibh, vel luctus neque porttitor vel. Proin aliquet nulla ac sapien aliquet, et vulputate turpis consectetur. Suspendisse potenti. Donec euismod sem eros, eu ultricies justo congue ut. In eu suscipit quam, sed tincidunt quam. Cras commodo neque sit amet orci lobortis rhoncus. Mauris laoreet arcu a metus aliquet ullamcorper non nec nunc. Morbi quis posuere mi. Nulla suscipit ultrices fermentum. Sed vel diam tincidunt, placerat ex sed, vulputate sapien.</p>
         </section>
     </main>
-
-    <footer><h3>Todos os direitos reservados</h3></footer>
-
-</body>
-</html>
+{% endblock %}
