@@ -1,31 +1,15 @@
-header {
-    display: grid;
-    grid-template-columns: 1fr auto; 
-    align-items: center;
-    
-  aside {
-    text-align: right;
-    #comBorda{
-        border-right: 1px solid rgb(114 116 164);
-        border-left: 1px solid rgb(114 116 164);
-        padding: 3px;
-    }  
-  }
-  img{
-    margin: 3px
-  }
-}
-
 main{
-    display: grid;
-    justify-items: center;
+  background-color: rgba(255, 255, 251, 0.884);
+}
 
-    figure{
-      margin-top: 5.5vh;
+header, footer{
+  background-color: rgba(189, 224, 255, 0.877);
+  aside{
+    nav{
+      a{
+        text-decoration: none;
+      }
+      }
     }
+  }
 }
-
-footer{
-  text-align: center;
-}
-
