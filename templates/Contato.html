@@ -2,18 +2,25 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-    <section style="border-bottom: 1px solid #ccc; margin-bottom: 3vh;"
-        <h2>Entre em contato</h2>
-        <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet molis nisl.</p>
-    </section>
+<section class="mb-4">
+    <h2>Entre em contato</h2>
+    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet molis nisl.</p>
+</section>
 
-    <form>
-        <label for="femail">Seu Email:</label><br>
-        <input type="text" id="femail" name="femail"><br>
-        <label for="fassunto">Assunto:</label><br>
-        <input type="text" id="fassunto" name="fassunto"><br>
-        <label for="fdescricao">Descrição</label><br>
-        <textarea id="fdescricao" name="fdescricao" rows="4" cols="30"></textarea><br>
-        <input type="submit" value="Enviar">
-    </form>
+<form>
+    <div class="form-group">
+        <label for="femail">Seu Email:</label>
+        <input type="email" class="form-control" id="femail" name="femail" placeholder="Digite seu email">
+    </div>
+    <div class="form-group">
+        <label for="fassunto">Assunto:</label>
+        <input type="text" class="form-control" id="fassunto" name="fassunto" placeholder="Digite o assunto">
+    </div>
+    <div class="form-group">
+        <label for="fdescricao">Descrição:</label>
+        <textarea class="form-control" id="fdescricao" name="fdescricao" rows="4"
+            placeholder="Digite sua descrição"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary my-2">Enviar</button>
+</form>
 {% endblock %}
