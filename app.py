@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'password123'
+app.config['MYSQL_PASSWORD'] = 'fatec'
 app.config['MYSQL_DB'] = 'contatos'
 
 ##  CRIAÇÃO DO OBJETO DO FLASK  ##
@@ -29,7 +29,7 @@ def contato():
         descricao = request.form['descricao']
 
         cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO message(email, topic, description) VALUES (%s, %s, %s)", (email, assunto, descricao))
+        cur.execute("INSERT INTO mensagens(email, assunto, descricao) VALUES (%s, %s, %s)", (email, assunto, descricao))
         mysql.connection.commit()
         cur.close()
         #  Ao fim da postagem da mensagem no banco de dados, retorna um redirecionamento para a rota Mensagens  #
@@ -42,7 +42,7 @@ def contato():
 def messages():
     #  Atribui a 'messages' as tabelas resultante da requisição SQL  #
     cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM message")
+    cur.execute("SELECT * FROM mensagens")
     messages = cur.fetchall()
     cur.close()
 

@@ -16,7 +16,7 @@
             <!-- Pega a tabela messages que é carregada junto com a renderização da página e itera sobre cada linha dela --> 
             {% for message in messages %}
                 <tr>
-                    <!-- Pega os itens 1, 2 e 3 que constituem a lista resultante do query na database -->
+                    <!-- Pega os itens 1, 2 e 3 que constituem a lista resultante do query na database, 0 sendo o ID -->
                     <td>{{ message[1] }}</td>  <!-- email -->
                     <td>{{ message[2] }}</td>  <!-- assunto -->
                     <td>{{ message[3] }}</td>  <!-- descricao -->
